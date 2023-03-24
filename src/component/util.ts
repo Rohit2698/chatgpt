@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {getChatResponse} from '../constant/ApiConstant';
+import {API_TOKEN} from '@env';
 
 export const getMesageReply = (message: string) => {
   return axios
@@ -11,8 +12,7 @@ export const getMesageReply = (message: string) => {
       },
       {
         headers: {
-          Authorization:
-            'Bearer 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',
+          Authorization: `Bearer ${API_TOKEN}`,
         },
       },
     )
